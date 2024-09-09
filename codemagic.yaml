@@ -55,6 +55,7 @@ workflows:
         script: mv "derivedData/Build/Products/Debug-iphonesimulator/banaan.app" "derivedData/Build/Products/Debug-iphonesimulator/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.app"
     artifacts:
       - derivedData/Build/Products/*-iphonesimulator/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
 
   empty:
     environment:
