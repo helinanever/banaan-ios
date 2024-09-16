@@ -34,6 +34,7 @@ workflows:
   build-app:
     name: Build app
     environment:
+      xcode: 16.0
       vars:
         PROJECT_DIR: ios-test2
     scripts:
@@ -59,7 +60,7 @@ workflows:
 
   empty:
     environment:
-      xcode: 15.2
+      xcode: 16.0
     scripts:
       - echo "Empty"
 
