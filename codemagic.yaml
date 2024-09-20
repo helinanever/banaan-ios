@@ -26,9 +26,6 @@ workflows:
       - name: Generate notes
         script: |
          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
-    publishing:
-      tester_groups:
-        - hello
     artifacts:
       - build/ios/xcarchive/*.xcarchive
       - build/ios/ipa/*.ipa
@@ -57,6 +54,9 @@ workflows:
         working_directory: $PROJECT_DIR
       - name: Rename artifact
         script: mv "derivedData/Build/Products/Debug-iphonesimulator/banaan.app" "derivedData/Build/Products/Debug-iphonesimulator/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.app"
+    publishing:
+      tester_groups:
+        - hello
     artifacts:
       - derivedData/Build/Products/*-iphonesimulator/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
