@@ -26,6 +26,9 @@ workflows:
       - name: Generate notes
         script: |
          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
+    publishing:
+      tester_groups:
+        - hello
     artifacts:
       - build/ios/xcarchive/*.xcarchive
       - build/ios/ipa/*.ipa
