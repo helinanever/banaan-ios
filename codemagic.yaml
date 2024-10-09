@@ -62,6 +62,13 @@ workflows:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
 
   empty:
+    pre_clone_scripts:
+      - echo "this is a pre-clone script"
+      - echo $value
+    inputs:
+      my_input:
+        description: Your value
+        default: value
     environment:
       xcode: 16.0
     scripts:
