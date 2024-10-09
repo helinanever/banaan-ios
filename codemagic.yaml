@@ -73,9 +73,6 @@ workflows:
       xcode: 16.0
     scripts:
       - echo "Empty"
-    pre_clone_scripts:
-      - echo "this is a pre-clone script"
-      - echo $my_input
 
   test-app:
     name: Test App
