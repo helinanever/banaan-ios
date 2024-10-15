@@ -70,7 +70,8 @@ workflows:
         description: Your value
         default: value
     labels:
-      - test_empty
+      - test
+      - empty
     environment:
       xcode: 16.0
     scripts:
