@@ -69,10 +69,15 @@ workflows:
       my_input:
         description: Your value
         default: value
+    labels:
+      - empty
     environment:
       xcode: 16.0
     scripts:
       - echo "Empty"
+    triggering:
+      events:
+        - push
 
   test-app:
     name: Test App
