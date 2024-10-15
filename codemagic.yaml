@@ -71,6 +71,7 @@ workflows:
         default: value
     labels:
       - empty
+      - test
     environment:
       xcode: 16.0
     scripts:
