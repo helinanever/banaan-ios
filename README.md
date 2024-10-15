@@ -1,2 +1,2 @@
-Hello, this is my test app 🍌
+Hello, this is my test app for Banana 🍌
 
